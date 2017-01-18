@@ -2,7 +2,7 @@
 import requests
 from cfg import config
 
-def login(user_login = config['pushover']['login'], user_passwd = config['pushover']['passwd'], user_key = config['pushover']['user_key'], pushover_base = config['pushover']['base_url']):
+def login(user_login = config['pushover']['login'], user_passwd = config['pushover']['passwd'], user_key = config['pushover']['key'], pushover_base = config['pushover']['base_url']):
     """
         Make the user login in pushover API
     """
