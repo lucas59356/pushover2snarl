@@ -1,0 +1,14 @@
+{
+  "pushover": {
+    "base_url": "https://api.pushover.net",
+    "login": "john_doe@example.com",
+    "passwd": "mysecurepasswd",
+    "key": "pushover key, present on dashboard"
+  },
+  "snarl": {
+    "app_sig": "pushover",
+    "default_title": "Pushover",
+    "url": "http://localhost/%s",
+    "default_icon": "info"
+  }
+}

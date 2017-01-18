@@ -1,0 +1,9 @@
+﻿{'id': 4, 'message': 'koskfosfkp', 'app': 'Pushover', 'aid': 1, 'icon': 'pushover', 'date': 1484660135, 'priority': 0, 'acked': 0, 'umid': 108, 'title': 'teste'}
+
+register app-sig="pushover" uid=1 title=Pushover keep-alive
+
+hello app-sig="pushover"
+
+addclass app-sig="pushover" name=[app] title=[app] icon="info" id=[aid]
+
+notify app-sig="pushover" title=[title] text=[message] timeout="10" uid=[id] 
