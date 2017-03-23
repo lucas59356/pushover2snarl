@@ -118,7 +118,10 @@ def snarl_notify(msg):
     data = "?app-sig=%s&timeout=%s&uid=%s&id=%s&title=%s&text=%s" %(cfg['snarl']['app_sig'], str(10), str(msg['id']), str(msg['aid']),str(msg['title']) ,str(msg['message']))
     method = 'notify'
     url = cfg['snarl']['url'] %method
-    os.system(""" curl "%s%s"  """ %(url, data))
+    # Workaround to avoid errors
+    data = data.replace("[","\[").replace("]","\]").replace("{","\{").replace("}","\}").replace('"','\"')
+
+    os.system(""" curl "%s%s" """ %(url, data))
 
 secret = pushover_login()
 device_id = pushover_get_device()
